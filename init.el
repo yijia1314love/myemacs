@@ -17,6 +17,17 @@
  ;; If there is more than one, they won't work right.
  )
 
+;; 显示行号
+(global-linum-mode 1)
+
+;; 更改光标的样式（不能生效，解决方案见第二集）
+(setq cursor-type 'bar)
+
+;; 更改显示字体大小 16pt
+;; http://stackoverflow.com/questions/294664/how-to-set-the-font-size-in-emacs
+(set-face-attribute 'default nil :height 160)
+
+
 ;; 代码自动补全
 (add-to-list 'load-path "~/.emacs.d/plugins/auto-complete/")
 (require 'auto-complete-config)
@@ -33,8 +44,14 @@
 (global-highlight-parentheses-mode t)
 
 
+(add-hook 'xref-backend-functions #'dumb-jump-xref-activate)
+
 ;; 主题配置
-(require 'init-huyan-theme)
+;;(require 'init-huyan-theme)
+
+(add-to-list 'load-path (expand-file-name "~/lisp"))
+(require 'toxi-theme)
+
 
 
 
