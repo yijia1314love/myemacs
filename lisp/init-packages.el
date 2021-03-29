@@ -16,6 +16,7 @@
          yasnippet
          yasnippet-snippets
          projectile
+         yafolding
 				 )  "Default packages")
 
 (setq package-selected-packages yiyi/packages)
@@ -62,5 +63,13 @@
 (setq projectile-enable-caching t)
 ;; 使用f5键打开默认文件搜索
 (global-set-key [f5] 'projectile-find-file)
+
+(global-set-key (kbd "s-d y") 'yafolding-discover)
+(add-hook 'prog-mode-hook
+          (lambda () (yafolding-mode)))
+(require 'yafolding)
+(lambda ()
+    (yafolding-show-all)
+    (delete-trailing-whitespace))
 
 (provide 'init-packages)
