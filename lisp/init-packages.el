@@ -17,6 +17,7 @@
          yasnippet-snippets
          projectile
          yafolding
+         magit
 				 )  "Default packages")
 
 (setq package-selected-packages yiyi/packages)
@@ -50,6 +51,9 @@
 (yas-reload-all)
 (add-hook 'prog-mode-hook #'yas-minor-mode)
 
+(add-hook 'php-mode-hook 'php-enable-default-coding-style)
+
+;; 项目管理
 (add-to-list 'package-pinned-packages '(projectile . "melpa-stable") t)
 (require 'projectile)
 (projectile-mode +1)
@@ -61,13 +65,12 @@
 (projectile-global-mode)
 ;; 默认打开缓存
 (setq projectile-enable-caching t)
-;; 使用f5键打开默认文件搜索
-(global-set-key [f5] 'projectile-find-file)
 
+;; 代码折叠
+(require 'yafolding)
 (global-set-key (kbd "s-d y") 'yafolding-discover)
 (add-hook 'prog-mode-hook
           (lambda () (yafolding-mode)))
-(require 'yafolding)
 (lambda ()
     (yafolding-show-all)
     (delete-trailing-whitespace))
