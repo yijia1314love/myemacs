@@ -8,6 +8,7 @@
 
 ;;add whatever packages you want here
 (defvar yiyi/packages '(
+         use-package
 				 js2-mode
 				 web-mode
          expand-region
@@ -18,6 +19,10 @@
          projectile
          yafolding
          magit
+         go-mode
+         lsp-mode
+         lsp-ui
+         company
 				 )  "Default packages")
 
 (setq package-selected-packages yiyi/packages)

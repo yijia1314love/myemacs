@@ -4,6 +4,11 @@
 ;; 关闭文件滑动控件
 (scroll-bar-mode -1)
 
+
+;; 编码
+(set-language-environment 'UTF-8)
+(set-locale-environment "UTF-8")
+
 ;; 显示行号
 (global-linum-mode 1)
 
