@@ -30,5 +30,9 @@
 (with-eval-after-load 'dired
     (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
 
+;; 语法检查
+(use-package flycheck
+  :hook (after-init . global-flycheck-mode))
+
 
 (provide 'init-basic)

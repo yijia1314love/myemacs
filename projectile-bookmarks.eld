@@ -1,1 +1,1 @@
-("~/.emacs.d/" "d:/project/owner/" "d:/project/mygo/")
+("d:/project/mygo/" "d:/project/owner/" "~/.emacs.d/")
