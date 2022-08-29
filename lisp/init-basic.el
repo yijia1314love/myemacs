@@ -34,5 +34,19 @@
 (use-package flycheck
   :hook (after-init . global-flycheck-mode))
 
+;;撤销树
+(require 'undo-tree)
+(global-undo-tree-mode)
+
+;;未选中注释
+(global-set-key [?\C-c ?\C-/] 'comment-or-uncomment-region)
+(defun my-comment-or-uncomment-region (beg end &optional arg)
+  (interactive (if (use-region-p)
+                   (list (region-beginning) (region-end) nil)
+                 (list (line-beginning-position)
+                       (line-beginning-position 2))))
+  (comment-or-uncomment-region beg end arg)
+)
+(global-set-key [remap comment-or-uncomment-region] 'my-comment-or-uncomment-region)
 
 (provide 'init-basic)

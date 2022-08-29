@@ -54,4 +54,13 @@
 	     (ignore-errors (backward-up-list))
 	     (funcall fn)))))
 
+(require 'ivy-posframe)
+;; Different command can use different display function.
+(setq ivy-posframe-display-functions-alist
+      '((swiper          . ivy-posframe-display-at-point)
+        (complete-symbol . ivy-posframe-display-at-point)
+        (counsel-M-x     . ivy-posframe-display-at-window-bottom-left)
+        (t               . ivy-posframe-display)))
+(ivy-posframe-mode 1)
+
 (provide 'init-ui)

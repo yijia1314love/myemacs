@@ -2,6 +2,8 @@
 (require 'lsp-mode)
 (use-package lsp-mode
     :hook ((go-mode . lsp-deferred))
+    :hook ((php-mode . lsp-deferred))
+    :hook ((web-mode . lsp-deferred))
     :commands (lsp lsp-deferred))
 
 

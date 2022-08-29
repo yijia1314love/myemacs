@@ -23,6 +23,9 @@
          lsp-mode
          lsp-ui
          company
+         php-mode
+         ivy-posframe
+         undo-tree
 				 )  "Default packages")
 
 (setq package-selected-packages yiyi/packages)
@@ -39,14 +42,6 @@
     (when (not (package-installed-p pkg))
       (package-install pkg))))
 
-
-
-;; config js2-mode for js files
-(setq auto-mode-alist
-      (append
-       '(("\\.js\\'" . js2-mode))
-       '(("\\.html\\'" . web-mode))
-       auto-mode-alist))
 
 (add-to-list 'load-path
               "~/.emacs.d/elpa/yasnippet")
@@ -73,7 +68,7 @@
 
 ;; 代码折叠
 (require 'yafolding)
-(global-set-key (kbd "s-d y") 'yafolding-discover)
+;;(global-set-key (kbd "s-e y") 'yafolding-discover)
 (add-hook 'prog-mode-hook
           (lambda () (yafolding-mode)))
 (lambda ()
