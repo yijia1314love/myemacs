@@ -33,7 +33,17 @@
 (global-hl-line-mode 1)
 
 ;; 加载主题
-(load-theme 'monokai 1)
+;;(load-theme 'monokai 1)
+ (load-theme 'aalto-light t t)
+ (enable-theme 'aalto-light)
+;;(use-package gruvbox-theme 
+;;    :init (load-theme 'gruvbox-light-hard t))
+
+(use-package smart-mode-line 
+    :init 
+    (setq sml/no-confirm-load-theme t) 
+    (setq sml/theme 'respectful) 
+    (sml/setup)) 
 
 ;; 禁止生成保存文件
 (setq auto-save-default nil)
@@ -54,6 +64,7 @@
 	     (ignore-errors (backward-up-list))
 	     (funcall fn)))))
 
+;;ivx布局
 (require 'ivy-posframe)
 ;; Different command can use different display function.
 (setq ivy-posframe-display-functions-alist
@@ -62,5 +73,4 @@
         (counsel-M-x     . ivy-posframe-display-at-window-bottom-left)
         (t               . ivy-posframe-display)))
 (ivy-posframe-mode 1)
-
 (provide 'init-ui)

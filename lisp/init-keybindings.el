@@ -13,3 +13,11 @@
 (define-key yafolding-mode-map (kbd "C-c <C-S-return>") 'yafolding-hide-parent-element)
 (define-key yafolding-mode-map (kbd "C-c <C-return>") 'yafolding-toggle-element)
 (provide 'init-keybindings)
+
+;;快捷键操作
+(use-package crux 
+    :bind (("C-S-d" . crux-duplicate-current-line-or-region)
+           ("C-a" . crux-move-beginning-of-line) 
+           ("C-c ^" . crux-top-join-line)
+           ("C-x ," . crux-find-user-init-file)
+           ("C-S-k" . crux-smart-kill-line)))

@@ -27,7 +27,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(## use-package js2-mode web-mode expand-region iedit helm-ag yasnippet yasnippet-snippets projectile yafolding magit go-mode lsp-mode php-mode lsp-ui company ivy-posframe undo-tree)))
+   '(color-theme-modern ## use-package js2-mode web-mode expand-region iedit helm-ag yasnippet yasnippet-snippets projectile yafolding magit go-mode lsp-mode php-mode lsp-ui company undo-tree which-key crux ivy counsel  swiper)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

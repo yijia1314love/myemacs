@@ -24,8 +24,15 @@
          lsp-ui
          company
          php-mode
-         ivy-posframe
          undo-tree
+         gruvbox-theme
+         smart-mode-line 
+         restart-emacs
+         which-key
+         crux
+         ivy
+         counsel
+         swiper
 				 )  "Default packages")
 
 (setq package-selected-packages yiyi/packages)
