@@ -82,4 +82,7 @@
     (yafolding-show-all)
     (delete-trailing-whitespace))
 
+;;跳转
+(setq xref-show-definitions-function #'xref-show-definitions-completing-read)
+
 (provide 'init-packages)

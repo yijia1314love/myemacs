@@ -1,1 +1,1 @@
-("~/project/push/" "~/project/golearn/" "~/.emacs.d/")
+("~/.emacs.d/" "~/project/push/" "~/project/golearn/")

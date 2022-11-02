@@ -14,13 +14,6 @@
 (require 'init-mode)
 (require 'init-keybindings)
 
-
-
-
-(add-hook 'xref-backend-functions #'dumb-jump-xref-activate)
-(executable-find "gopls")
-
-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

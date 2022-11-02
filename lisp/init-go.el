@@ -6,7 +6,7 @@
     :hook ((web-mode . lsp-deferred))
     :commands (lsp lsp-deferred))
 
-
+(executable-find "gopls")
 (lsp-register-custom-settings
  '(("gopls.completeUnimported" t t)
    ("gopls.staticcheck" t t)))

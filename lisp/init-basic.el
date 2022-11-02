@@ -37,6 +37,7 @@
 ;;撤销树
 (require 'undo-tree)
 (global-undo-tree-mode)
+(setq undo-tree-history-directory-alist `(("." . "~/.emacs.d/.cache/")))
 
 ;;未选中注释
 (global-set-key [?\C-c ?\C-/] 'comment-or-uncomment-region)
@@ -68,7 +69,7 @@
         ivy-initial-inputs-alist nil 
         ivy-count-format "%d/%d " 
         enable-recursive-minibuffers t 
-        ) 
+        ivy-re-builders-alist '((t . ivy--regex-ignore-order))) 
   (ivy-posframe-mode 1))
 
 (use-package counsel 
