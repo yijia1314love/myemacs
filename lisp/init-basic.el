@@ -40,7 +40,7 @@
 (setq undo-tree-history-directory-alist `(("." . "~/.emacs.d/.cache/")))
 
 ;;未选中注释
-(global-set-key [?\C-c ?\C-/] 'comment-or-uncomment-region)
+(global-set-key [?\C-c ?\/] 'comment-or-uncomment-region)
 (defun my-comment-or-uncomment-region (beg end &optional arg)
   (interactive (if (use-region-p)
                    (list (region-beginning) (region-end) nil)

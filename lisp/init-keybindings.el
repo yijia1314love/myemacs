@@ -16,7 +16,7 @@
 
 ;;快捷键操作
 (use-package crux 
-    :bind (("C-S-d" . crux-duplicate-current-line-or-region)
+    :bind (("C-c k" . crux-duplicate-current-line-or-region)
            ("C-a" . crux-move-beginning-of-line) 
            ("C-c ^" . crux-top-join-line)
            ("C-x ," . crux-find-user-init-file)
