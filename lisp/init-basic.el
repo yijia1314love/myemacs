@@ -86,4 +86,9 @@
   :config (setq swiper-action-recenter t 
                 swiper-include-line-number-in-search t))
 
+;;设置table四个空格
+(setq-default indent-tabs-mode nil) 
+(setq-default tab-width 4) 
+(setq indent-line-function 'insert-tab) 
+
 (provide 'init-basic)
