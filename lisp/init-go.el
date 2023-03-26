@@ -30,6 +30,6 @@
   :commands yas-minor-mode
   :hook (go-mode . yas-minor-mode))
 
-
+(add-hook 'before-save-hook 'gofmt-before-save)
 
 (provide 'init-go)
