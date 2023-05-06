@@ -33,6 +33,7 @@
          ivy
          counsel
          swiper
+         ag
 				 )  "Default packages")
 
 (setq package-selected-packages yiyi/packages)
